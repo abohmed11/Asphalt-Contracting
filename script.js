@@ -95,3 +95,61 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 1. منع القائمة المنسدلة عند الضغط كليك يمين
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+
+// 2. منع اختصارات لوحة المفاتيح الخاصة بالفحص وسرقة الكود
+document.addEventListener('keydown', function(e) {
+    // منع F12 (فتح أدوات المطور)
+    if (e.key === 'F12') {
+        e.preventDefault();
+        return false;
+    }
+    
+    // منع Ctrl + Shift + I (فتح الفحص)
+    if (e.ctrlKey && e.shiftKey && e.key === 'I') {
+        e.preventDefault();
+        return false;
+    }
+    
+    // منع Ctrl + Shift + J (فتح الكونسول)
+    if (e.ctrlKey && e.shiftKey && e.key === 'J') {
+        e.preventDefault();
+        return false;
+    }
+    
+    // منع Ctrl + U (عرض سورس كود الصفحة View Source)
+    if (e.ctrlKey && e.key === 'u') {
+        e.preventDefault();
+        return false;
+    }
+    
+    // منع Ctrl + S (حفظ الصفحة على الجهاز)
+    if (e.ctrlKey && e.key === 's') {
+        e.preventDefault();
+        return false;
+    }
+});
