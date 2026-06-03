@@ -751,3 +751,19 @@ h1, h2, h3, h4 {
 
 
 
+
+
+
+body {
+    -webkit-user-select: none; /* منع تحديد النصوص في متصفحات سفايري وكرووم */
+    -moz-user-select: none;    /* متصفح فايرفوكس */
+    -ms-user-select: none;     /* متصفح إيدج */
+    user-select: none;         /* المنع العام */
+}
+img {
+    pointer-events: none; /* منع سحب أو الضغط المطول على الصور */
+}
+
+
+
+
